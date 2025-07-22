@@ -1,12 +1,10 @@
 <template>
   <div>
     <h1 class="header">TALONARIO</h1>
-
     <ModalConfiguracion
       v-if="!configurado"
       @guardar="handleGuardarConfiguracion"
     />
-
     <div v-else class="layout">
       <!-- Panel izquierdo -->
       <div class="columna panel-izquierdo">
@@ -25,8 +23,9 @@
       <!-- Panel derecho -->
       <div class="columna panel-derecho">
         <div class="acciones">
-          <button @click="mostrarListado = true">📋 LISTAR BOLETAS</button>
-          <button @click="configurado = false">⚙️ PERSONALIZAR</button>
+          <button class="btn" @click="mostrarListado = true">📋 LISTAR BOLETAS</button>
+
+          <button class="btn" @click="configurado = false">⚙️ PERSONALIZAR</button>
         </div>
       </div>
     </div>
@@ -44,9 +43,7 @@
       @cerrar="mostrarListado = false"
     />
 
-    <footer class="footer">
-      Copyright ©2024. Todos los derechos reservados.
-    </footer>
+    
   </div>
 </template>
 
