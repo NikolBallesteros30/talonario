@@ -4,7 +4,7 @@
     <p>💲 {{ config.valor }}</p>
     <p>🏛️ {{ config.loteria }}</p>
     <p>📅 {{ config.fecha }}</p>
-    <button @click="$emit('editar')">Editar</button>
+    <button class="btn" @click="$emit('editar')">Editar</button>
   </div>
 </template>
 
